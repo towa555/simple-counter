@@ -6,16 +6,17 @@ function IncDec() {
   const[use,setUse]=useState(false)
 
 useEffect(() => {
-  if (num < 60) {
-    setTimeout(() => {
+  if (num <= 59) {
+   const timeO= setTimeout(() => {
       setNum((num) => num + 1);
-    }, 1000);
-    return () => clearTimeout(setTimeout);
+    }, 100);
+    return () => clearTimeout(timeO);
   }
   }, [num]);
 
  function decN (){
-  if ( num <=10 ){
+
+  if ( num <=0){
     setNum(60);
   }
 
